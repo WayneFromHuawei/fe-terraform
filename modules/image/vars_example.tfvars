@@ -1,0 +1,8 @@
+region="eu-west-0"
+name="terrtest-module-image"
+#local_file_path="/home/cloud/images/SLES_11_SP4.x86_64-0.0.13.qcow2"
+image_source_url="https://oss.prod-cloud-ocb.orange-business.com/obs-liangdezhi/SLES_11_SP4.x86_64-0.0.13.qcow2"
+container_format="bare"
+min_disk_gb="10"
+disk_format="qcow2"
+visibility="private"

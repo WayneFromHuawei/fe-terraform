@@ -1,5 +1,9 @@
-variable "project" {
+variable "name" {
     description = "naming prefix for created resources"
+}
+
+variable "router_id" {
+	description = "id of router to attach subnet"
 }
 
 variable "subnet" {

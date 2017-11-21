@@ -12,4 +12,3 @@ output "count" {
     description = "number of servers created"
     value       = "${var.ecs_count}"
 }
-

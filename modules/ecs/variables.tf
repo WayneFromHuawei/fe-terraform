@@ -67,6 +67,11 @@ variable "metadata_this" {
 	default = "that"
 }
 
+variable "allowed_address_pairs" {
+	type="list"
+	default=[]
+}
+
 variable "ext_net_name" {
     description = "name of the external network (do not change)"
     default     = "admin_external_net"

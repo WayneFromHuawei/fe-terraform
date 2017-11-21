@@ -26,6 +26,7 @@ resource "openstack_networking_port_v2" "network_port" {
 	network_id     	 = "${var.network_id}"
 	security_group_ids = ["${var.security_groups}"]
 	admin_state_up     = "true"
+	allowed_address_pairs = ["${var.allowed_address_pairs}"]
 	fixed_ip           = {
 		subnet_id      = "${var.subnet_id}"
   }

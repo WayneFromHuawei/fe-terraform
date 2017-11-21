@@ -1,0 +1,10 @@
+region="eu-west-0"
+az="eu-west-0a"
+project="terrtest-stack"
+image_id="ab30dd89-ca93-4e0d-b23d-75fecdea8e4e"
+flavor="t2.micro"
+keypair="KeyPair-wanwei-ocb-1835"
+instance_count="1"
+security_groups=["fc5fb8b7-7c3d-4c41-9fc3-cf92d0e83ede"]
+network_id="a4453251-08aa-40b1-a93e-9ae26c7d780f"
+subnet_id="3be387c0-4847-4689-bccf-9df7869ccf66"

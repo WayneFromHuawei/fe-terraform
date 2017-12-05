@@ -1,7 +1,7 @@
 region="eu-west-0"
 az_a="eu-west-0a"
 az_b="eu-west-0b"
-project="terrtest-public-elb"
+project="terrtest"
 image_id="ab30dd89-ca93-4e0d-b23d-75fecdea8e4e"
 flavor="t2.micro"
 keypair="KeyPair-wanwei-ocb-1835"

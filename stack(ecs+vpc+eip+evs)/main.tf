@@ -1,7 +1,6 @@
-#a statck to create vpc/ecs/security group and rules using pre-defined modules
 module "vpc" {
     source = "..//modules//vpc"
-    name   = "${var.project}-net"
+    project   = "${var.project}-net"
     subnet = "${var.subnet_cidr}"
 	nameserver = "${var.nameserver}"
 }

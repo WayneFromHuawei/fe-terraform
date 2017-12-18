@@ -32,12 +32,15 @@ resource "orangecloud_elb_health" "health_1" {
   #The value can be HTTP or TCP (case-insensitive).
   healthcheck_protocol = "${var.backend_protocol}"
 
+  healthcheck_connect_port = "${var.healthcheck_connect_port}"
+  
   healthcheck_uri      = "${var.healthcheck_uri}"
   healthy_threshold    = "${var.healthy_threshold}"
   unhealthy_threshold  = "${var.unhealthy_threshold}"
   healthcheck_timeout  = "${var.healthcheck_timeout}"
   healthcheck_interval = "${var.healthcheck_interval}"
-
+  
+  
   timeouts {
     create = "5m"
     update = "5m"

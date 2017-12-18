@@ -16,28 +16,33 @@ variable "healthcheck_protocol" {
   default     = "HTTP"
 }
 
+variable "healthcheck_connect_port" {
+  description = "the port used for the health check,The value ranges from 1 to 65535."
+  default     = "80"
+}
+
 variable "healthcheck_uri" {
-  description = "cidr of the desired subnet for the VPC"
+  description = "the URI for health check. This parameter is valid when healthcheck_protocol is HTTP"
   default     = "/"
 }
 
 variable "healthy_threshold" {
-  description = "cidr of the desired subnet for the VPC"
+  description = "the threshold at which the health check result is success,the value ranges from 1 to 10."
   default     = "5"
 }
 
 variable "unhealthy_threshold" {
-  description = "cidr of the desired subnet for the VPC"
+  description = "the threshold at which the health check result is fail,the value ranges from 1 to 10."
   default     = "5"
 }
 
 variable "healthcheck_timeout" {
-  description = "cidr of the desired subnet for the VPC"
+  description = "the maximum timeout duration (s) for the health check,The value ranges from 1 to 50."
   default     = "15"
 }
 
 variable "healthcheck_interval" {
-  description = "cidr of the desired subnet for the VPC"
+  description = "the maximum interval (s) for health check,the value ranges from 1 to 5."
   default     = "3"
 }
 

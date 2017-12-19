@@ -1,0 +1,5 @@
+bucket_id="terrtest-bucket1"
+object_path="./testobject1.log"
+object_key="testobject1.log"
+object_acl="public-read-write"
+content_type="application/txt"

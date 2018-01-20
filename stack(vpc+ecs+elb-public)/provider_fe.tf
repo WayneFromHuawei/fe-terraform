@@ -1,4 +1,4 @@
-provider "orangecloud" {
+provider "flexibleengine" {
   user_name   = ""
   tenant_name = "eu-west-0"
   password    = ""

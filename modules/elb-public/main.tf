@@ -1,13 +1,13 @@
-resource "orangecloud_elb_loadbalancer" "loadbalancer_1" {
+resource "flexibleengine_elb_loadbalancer" "loadbalancer_1" {
   type      = "External"
   name      = "${var.project}-lb"
   vpc_id    = "${var.vpc_id}"
   bandwidth = "${var.bandwidth}"
 }
 
-resource "orangecloud_elb_listener" "listener_1" {
+resource "flexibleengine_elb_listener" "listener_1" {
   name            = "${var.project}-listener"
-  loadbalancer_id = "${orangecloud_elb_loadbalancer.loadbalancer_1.id}"
+  loadbalancer_id = "${flexibleengine_elb_loadbalancer.loadbalancer_1.id}"
   protocol        = "${var.protocol}"
   protocol_port   = "${var.protocol_port}"
 
@@ -26,8 +26,8 @@ resource "orangecloud_elb_listener" "listener_1" {
   }
 }
 
-resource "orangecloud_elb_health" "health_1" {
-  listener_id = "${orangecloud_elb_listener.listener_1.id}"
+resource "flexibleengine_elb_health" "health_1" {
+  listener_id = "${flexibleengine_elb_listener.listener_1.id}"
 
   #The value can be HTTP or TCP (case-insensitive).
   healthcheck_protocol = "${var.backend_protocol}"
@@ -48,8 +48,8 @@ resource "orangecloud_elb_health" "health_1" {
   }
 }
 
-resource "orangecloud_elb_backend" "backend_1" {
-  listener_id = "${orangecloud_elb_listener.listener_1.id}"
+resource "flexibleengine_elb_backend" "backend_1" {
+  listener_id = "${flexibleengine_elb_listener.listener_1.id}"
 
   count     = "${var.member_count}"
   address   = "${element(var.addresses, count.index)}"
